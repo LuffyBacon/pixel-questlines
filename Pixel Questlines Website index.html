@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixel Questlines</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #121212;
+      color: #00ffcc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(to bottom, #1a1a1a, #000000);
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ffd369;
+      text-shadow: 2px 2px #000;
+      letter-spacing: 2px;
+    }
+
+    .pixel-box {
+      background-color: #1f1f1f;
+      border: 4px solid #00ffcc;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 0 20px #00ffcc55;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #00c2a8;
+    }
+
+    .discord-banner {
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .discord-banner:hover {
+      background-color: #4752c4;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn, .discord-banner {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🕹️ Pixel Questlines</h1>
+  </header>
+
+  <div class="pixel-box">
+    <p>
+      Welcome to <strong>Pixel Questlines</strong> — an epic retro-style adventure game where every pixel tells a story!
+      <br><br>
+      Level up, fight pixelated bosses, unlock hidden realms, and create your own destiny across 8-bit worlds.
+    </p>
+
+    <button class="btn" onclick="window.open('https://www.roblox.com/games/113918897760003/Pixel-Questlines')">▶️ Play Now</button>
+    <button class="btn" onclick="window.open('https://www.youtube.com/')">🎥 Watch Trailer</button>
+    <button class="discord-banner" onclick="window.open('https://discord.gg/wE6rSqzdSY')">💬 Join My Discord Server</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Pixel Questlines | All pixels reserved.
+  </footer>
+
+</body>
+</html>
