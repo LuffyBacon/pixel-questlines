@@ -205,48 +205,61 @@
 </head>
 <body>
 
-  <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="https://files.catbox.moe/8bit_song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<!-- Background Music -->
+<audio id="bg-music" autoplay loop muted>
+  <source src="https://files.catbox.moe/8bit_song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
-  <!-- Mute Button -->
-  <button onclick="toggleMusic()" style="
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-    padding: 8px 16px;
-    background-color: #ff5555;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  ">
-    🔊 Mute
-  </button>
+<!-- Mute Button -->
+<button onclick="toggleMusic()" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 8px 16px;
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+">
+  🔇 Unmute
+</button>
 
-  <script>
-    let music = document.getElementById("bg-music");
-    let isMuted = false;
-    function toggleMusic() {
-      if (isMuted) {
-        music.play();
-        event.target.textContent = "🔊 Mute";
-      } else {
-        music.pause();
-        event.target.textContent = "🔇 Unmute";
-      }
-      isMuted = !isMuted;
+<script>
+  const music = document.getElementById("bg-music");
+  let isMuted = true;
+  function toggleMusic() {
+    if (isMuted) {
+      music.muted = false;
+      music.play();
+      event.target.textContent = "🔊 Mute";
+    } else {
+      music.muted = true;
+      event.target.textContent = "🔇 Unmute";
     }
-  </script>
+    isMuted = !isMuted;
+  }
+</script>
 
   <!-- Header Section -->
   <header>
     <h1>Pixel Questlines</
+<!-- Special Thanks Section -->
+<section style="background-color: #1c1c1c; color: white; padding: 40px 20px; text-align: center;">
+  <h2 style="font-size: 32px; margin-bottom: 20px;">🙌 Special Thanks</h2>
+  <p>Huge shout-out to the awesome players who helped test Pixel Questlines!</p>
+  <ul style="list-style: none; padding: 0; font-size: 20px;">
+    <li><strong>Tinkbaby0013</strong></li>
+    <li><strong>ibrahimAfg123</strong></li>
+    <li><strong>gamemar191</strong></li>
+    <li><strong>THE_CM8</strong></li>
+    <li><strong>cut123002</strong></li>
+  </ul>
+</section>
 
 </body>
       <p style="color: #ffcc00; font-size: 20px; font-weight: bold; margin-top: 20px;">
