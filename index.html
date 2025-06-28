@@ -157,6 +157,96 @@
   <footer>
     &copy; 2025 Pixel Questlines | All pixels reserved.
   </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel Questlines</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #111;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: url('https://wallpapercave.com/wp/wp5567010.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+    a.button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 12px 24px;
+      background-color: #ff5555;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+    a.button:hover {
+      transform: scale(1.05);
+    }
+    section {
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://files.catbox.moe/8bit_song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Mute Button -->
+  <button onclick="toggleMusic()" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 8px 16px;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  ">
+    🔊 Mute
+  </button>
+
+  <script>
+    let music = document.getElementById("bg-music");
+    let isMuted = false;
+    function toggleMusic() {
+      if (isMuted) {
+        music.play();
+        event.target.textContent = "🔊 Mute";
+      } else {
+        music.pause();
+        event.target.textContent = "🔇 Unmute";
+      }
+      isMuted = !isMuted;
+    }
+  </script>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Pixel Questlines</
 
 </body>
 </html>
