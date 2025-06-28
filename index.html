@@ -205,45 +205,8 @@
 </head>
 <body>
 
-<!-- Background Music -->
-<audio id="bg-music" autoplay loop muted>
-  <source src="https://files.catbox.moe/8bit_song.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
-<!-- Mute Button -->
-<button onclick="toggleMusic()" style="
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-  padding: 8px 16px;
-  background-color: #ff5555;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-">
-  🔇 Unmute
-</button>
 
-<script>
-  const music = document.getElementById("bg-music");
-  let isMuted = true;
-  function toggleMusic() {
-    if (isMuted) {
-      music.muted = false;
-      music.play();
-      event.target.textContent = "🔊 Mute";
-    } else {
-      music.muted = true;
-      event.target.textContent = "🔇 Unmute";
-    }
-    isMuted = !isMuted;
-  }
-</script>
 
   <!-- Header Section -->
   <header>
